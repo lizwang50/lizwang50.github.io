@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sweetaste</title>
+    <link rel="stylesheet" href="css/all.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container">
+          <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><i class="material-icons">menu</i></button><a href="index.html" class="navbar-brand"><img src="img/logotype-sm-dark.png" width="114" alt="" class="d-inline-block d-md-none"><img src="img/logo-all-dark.png" height="40" alt="" class="d-none d-md-inline-block"></a>
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active"><a href="index.html" class="nav-link text-primary">首頁<span class="sr-only">(current)</span></a></li>
+              <li class="nav-item dropdown"><a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle text-primary">甜點                </a>
+                <div aria-labelledby="navbarDropdown" class="dropdown-menu"><a href="product-1.html" class="dropdown-item">所有甜點</a><a href="product-1.html" class="dropdown-item">本日精選</a><a href="product-1.html" class="dropdown-item">人氣推薦</a><a href="product-1.html" class="dropdown-item">新品上市</a></div>
+              </li>
+              <li class="nav-item"><a href="login-page.html" class="nav-link text-primary">會員登入                </a></li>
+            </ul>
+          </div>
+          <div class="dropdown ml-auto">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-cart"><a href="carts.html" class="nav-link d-flex align-items-center text-primary order-md-1"><i class="fas fa-shopping-cart mr-1"></i><span class="badge badge-pill badge-danger">5</span></a></button>
+            <div style="min-width: 300px" class="dropdown-menu dropdown-menu-right">
+              <div class="p-4">
+                <h6>已選擇的商品</h6>
+                <table class="table table-sm">
+                  <tbody>
+                    <tr> 
+                      <td class="align-middle p-0 py-1">香草巧克力棋格蛋糕</td>
+                      <td class="align-middle py-1">NT$750</td>
+                    </tr>
+                  </tbody>
+                </table><strong>總計: NT$750</strong><a href="carts.html" title="title" class="btn btn-primary btn-block mt-2">立即結帳 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="container my-lg-6">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="negative-margin">
+            <div class="bg-primary text-primary-lighter p-5">
+              <form>
+                <div class="form-row mb-5">
+                  <div class="col-6">
+                    <h4>發票資料</h4>
+                  </div>
+                  <div class="col-6 d-flex align-items-center">
+                    <div class="process-steps w-100">
+                      <div class="step-circle material-icons completed">done</div>
+                      <div class="step-circle material-icons completed">done</div>
+                      <div class="step-circle material-icons active"></div>
+                    </div>
+                  </div>
+                </div>
+                <nav class="nav nav-tabs nav-pills nav-fill nav-dark mb-5"><a id="receipt-1-tab" href="#receipt-1" data-toggle="tab" class="nav-item nav-link h4 py-3 active">電子發票</a><a id="receipt-2-tab" href="#receipt-2" data-toggle="tab" class="nav-item nav-link h4 py-3">郵寄發票</a></nav>
+                <div class="tab-content">
+                  <div id="receipt-1" role="tabpanel" class="tab-pane fade active show">
+                    <div class="form-row">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label for="protableNumber" class="h5">載具號碼</label>
+                          <input id="protableNumber" type="text" placeholder="/+AAAAAA" aria-describedby="helpId" class="form-control form-control-lg bg-primary-lighter">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label for="idNumber" class="h5">統一編號（選填）</label>
+                          <input id="idNumber" type="text" placeholder="12345678" aria-describedby="helpId" class="form-control form-control-lg bg-primary-lighter">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="receipt-2" role="tabpanel" class="tab-pane fade">
+                    <label for="inputState" class="h5">地址</label>
+                    <div class="form-row">
+                      <div class="col-6">
+                        <div class="form-group">
+                          <select id="inputState" class="form-control form-control-lg bg-primary-lighter">
+                            <option selected>台北市</option>
+                            <option value="">新北市</option>
+                            <option value="">基隆市</option>
+                            <option value="">桃園市</option>
+                            <option value="">新竹市</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-group">
+                          <select id="inputArea" class="form-control form-control-lg bg-primary-lighter">
+                            <option selected>信義區</option>
+                            <option value="">大安區</option>
+                            <option value="">南港區</option>
+                            <option value="">中山區</option>
+                            <option value="">中正區</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label for="idNumber-2" class="h5">統一編號（選填）</label>
+                          <input id="idNumber-2" type="text" placeholder="12345678" aria-describedby="helpId" class="form-control form-control-lg bg-primary-lighter">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="negative-margin"><a href="checkout-success.html" title="title" class="btn btn-lg btn-accent btn-block py-3 text-primary">下一步</a></div>
+        </div>
+        <div class="col-md-6 d-none d-lg-block">
+          <div class="card border-primary-lighter mb-4">
+            <h5 class="card-header bg-primary-lighter text-center text-primary">訂單摘要</h5>
+            <div class="card-body text-primary-light">
+              <div class="d-flex justify-content-between mb-3"><span>小計</span><span>NT$ 2,700</span></div>
+              <div class="d-flex justify-content-between mb-3"><span>運費</span><span>NT$ 300</span></div>
+              <div class="d-flex justify-content-between"><span class="h5">總計</span><span class="h5">NT$ 3,000</span></div>
+            </div>
+          </div>
+          <div class="card border-primary-lighter">
+            <h5 class="card-header bg-primary-lighter text-center text-primary">購物清單</h5>
+            <div class="card-body carts text-primary-light">
+              <div class="d-flex">
+                <div style="background-image:url('https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=3dd64dce95fceedb193ec7bcf0adbb8b&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80')" class="carts-img cart-image-sm mr-3"></div>
+                <div class="d-flex align-items-md-center flex-column flex-md-grow-1 flex-md-row">
+                  <div class="flex-fill mr-md-4"><span class="h5">糖霜肉桂派（2）</span><br><span>NT$ 900</span></div>
+                </div>
+              </div>
+              <div class="d-flex mt-3">
+                <div style="background-image:url('https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=3dd64dce95fceedb193ec7bcf0adbb8b&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80')" class="carts-img cart-image-sm mr-3"></div>
+                <div class="d-flex align-items-md-center flex-column flex-md-grow-1 flex-md-row">
+                  <div class="flex-fill mr-md-4"><span class="h5">糖霜肉桂派（2）</span><br><span>NT$ 900</span></div>
+                </div>
+              </div>
+              <div class="d-flex mt-3">
+                <div style="background-image:url('https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=3dd64dce95fceedb193ec7bcf0adbb8b&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80')" class="carts-img cart-image-sm mr-3"></div>
+                <div class="d-flex align-items-md-center flex-column flex-md-grow-1 flex-md-row">
+                  <div class="flex-fill mr-md-4"><span class="h5">糖霜肉桂派（2）</span><br><span>NT$ 900</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-primary-lighter pb-4">
+      <section class="bg-primary py-5 mb-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-5 d-flex align-items-center justify-content-center justify-content-md-start mb-4 mb-md-0"><img src="img/logo-light.png" width="40" alt=""><span class="text-white mx-3 h4 mb-0">訂閱甜蜜蜜優惠郵件</span></div>
+            <div class="col-md-5">
+              <div class="form-square form-square-withicon d-flex justify-content-between">
+                <label for="subscription" class="material-icons form-square-icon-left text-primary">email</label>
+                <input type="email" class="form-input w-100">
+                <button type="button" class="btn btn-accent btn-lg d-flex align-items-center rounded-0"><i class="material-icons">arrow_forward</i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-5 flex-column d-flex justify-content-between">
+            <div><img src="img/logotype.png" width="171" alt=""></div>
+            <ul class="list-unstyled text-primary">
+              <li>02-1234-5678</li>
+              <li>sweetaste@email.com</li>
+              <li>800台北市信義區幸福路 520 號</li>
+            </ul>
+          </div>
+          <div class="col-md-5 text-right d-none d-md-block"><img src="img/sm-今天是個吃甜點的好日子.png" width="59" alt=""></div>
+        </div>
+        <div class="row justify-content-center mt-6">
+          <div class="col-md-5"><img src="img/ic-facebook.png" height="32" alt="" class="mr-1"><img src="img/ic-line@.png" height="32" alt=""></div>
+          <div class="col-md-5 text-md-right"><span>© 2018 Sweetaste* All Rights Reserved</span></div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/carts.js"></script>
+  </body>
+</html>
