@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+    crossorigin="anonymous">
+  <title>BT21西餐廳</title>
+  <style>
+    body {
+      font-family: 'Arial', Courier, 'Microsoft JhengHei', sans-serif;
+    }
+    .btn {
+      border-width: 2px;
+    }
+    .form-control {
+      border-width: 2px;
+    }
+    .header-carousel-item {
+      height: 450px;
+    }
+    .bg-cover {
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, .6);
+    }
+
+    @media (min-width: 768px) {
+      .text-md-dark {
+        color: #333;
+        z-index: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div class="bg-secondary py-1">
+    <div class="container text-right">
+      <a href="#" class="text-white">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a href="#" class="text-white">
+        <i class="fab fa-twitter-square"></i>
+      </a>
+    </div>
+  </div> -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./logo-1.png" width="120" height="24" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">首頁
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              美味菜單
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">吃肉</a>
+              <a class="dropdown-item" href="#">吃肉肉</a>
+              <a class="dropdown-item" href="#">吃一堆橘子</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#loginModal">登入</a>
+          <a href="#" class="btn btn-warning ml-1" data-toggle="modal" data-target="#registerModal">註冊</a>
+        </form>
+      </div>
+    </div>
+    <div class="p-1">
+      <a href="#" class="text-white">
+        <i class="fab fa-facebook-f fa-lg"></i>
+      </a>
+      <a href="#" class="text-white mx-3">
+        <i class="fab fa-twitter fa-lg"></i>
+      </a>
+    </div>
+  </nav>
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item header-carousel-item bg-cover active" style="background-image: url(https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0a9cacdd6a4e7e408b8ba89d3d6e91d3&auto=format&fit=crop&w=1050&q=801050w)">
+          <div class="carousel-caption d-none d-md-block px-3">
+            <h5>一個人，田野間的輕鬆美味</h5>
+            <p>漢皇重色思傾國，御宇多年求不得。 楊家有女初長成，養在深閏人未識。 天生麗質難自棄，一朝選在君王側。 回眸一笑百媚生，六宮粉黛無顏色。 春寒賜浴華清池，溫泉水滑洗凝脂； 侍兒扶起嬌無力，始是新承恩澤時。</p>
+          </div>
+        </div>
+        <div class="carousel-item header-carousel-item bg-cover" style="background-image: url(https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=67fb2e7b1fbe39b18b51146234ef38aa&auto=format&fit=crop&w=1500&q=801500w)">
+          <div class="carousel-caption d-none d-md-block px-3">
+            <h5>大口地放縱，毫無保留</h5>
+            <p>雲鬢花顏金步搖，芙蓉帳暖度春宵； 春宵苦短日高起，從此君王不早朝。 承歡侍宴無閑暇，春從春遊夜專夜。 後宮佳麗三千人，三千寵愛在一身。 金屋妝成嬌侍夜，玉樓宴罷醉和春。 姊妹弟兄皆列士，可憐光彩生門戶。</p>
+          </div>
+        </div>
+        <div class="carousel-item header-carousel-item bg-cover" style="background-image: url(https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=74ac7c1aa35dc36f50cc1ac7517c70a7&auto=format&fit=crop&w=1650&q=801650w)">
+          <div class="carousel-caption d-none d-md-block px-3">
+            <h5>愛戀的赤裸火辣辣</h5>
+            <p>遂令天下父母心，不重生男重生女。 驪宮高處入青雲，仙樂風飄處處聞。 緩歌慢舞凝絲竹，盡日君王看不足。 漁陽鼙鼓動地來，驚破霓裳羽衣曲。 九重城闕煙塵生，千乘萬騎西南行。</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
+  <section class="bg-info py-5 text-white">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="mb-2">
+            <i class="fas fa-utensils fa-5x"></i>
+          </div>
+          <h3>忘卻不了的莓果香</h3>
+          <p>翠華搖搖行復止，西出都門百餘里； 六軍不發無奈何？宛轉蛾眉馬前死。 花鈿委地無人收，翠翹金雀玉搔頭。</p>
+        </div>
+        <div class="col-md-4">
+          <div class="mb-2">
+            <i class="fas fa-gift fa-5x"></i>
+          </div>
+          <h3>沉浸在心中的漣漪</h3>
+          <p>君王掩面救不得，回看血淚相和流。 黃埃散漫風蕭索，雲棧縈紆登劍閣。 峨嵋山下少人行，旌旗無光日色薄。</p>
+        </div>
+        <div class="col-md-4">
+          <div class="mb-2">
+            <i class="fas fa-birthday-cake fa-5x"></i>
+          </div>
+          <h3>放不下的體脂肪</h3>
+          <p>蜀江水碧蜀山青，聖主朝朝暮暮情。 行宮見月傷心色，夜雨聞鈴腸斷聲。 天旋地轉迴龍馭，到此躊躇不能去。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container-fluid py-5 bg-light text-white" style="position: relative;">
+    <div class="row">
+      <div class="col-md-5 bg-cover" style="
+      position: absolute; top:0; bottom: 0;
+background-image:
+url(https://images.unsplash.com/photo-1447279506476-3faec8071eee?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0e2254cee3ee52be4da1baa5d96532f3&auto=format&fit=crop&w=1650&q=801650w)"></div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-end text-md-dark">
+        <div class="col-md-7">
+          <h3>Welcome To Another Year Hogwarts</h3>
+          <p>馬嵬坡下泥土中，不見玉顏空死處。 君臣相顧盡霑衣，東望都門信馬歸。 歸來池苑皆依舊，太液芙蓉未央柳； 芙蓉如面柳如眉，對此如何不淚垂？春風桃李花開日，秋雨梧桐葉落時。 西宮南內多秋草，落葉滿階紅不掃。
+            梨園子弟白髮新，椒房阿監青娥老。
+            夕殿螢飛思悄然，孤燈挑盡未成眠。 遲遲鐘鼓初長夜，耿耿星河欲曙天。</p>
+          <a href="#" class="btn btn-outline-info">查看更多</a>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <h4>像含羞草似的嬌羞</h4>
+              <p>鴛鴦瓦冷霜華重，翡翠衾寒誰與共？ 悠悠生死別經年，魂魄不曾來入夢。 臨邛道士鴻都客，能以精誠致魂魄； 為感君王輾轉思，遂教方士殷勤覓。</p>
+            </div>
+            <div class="col-md-6">
+              <h4>像野百合般的玫瑰</h4>
+              <p>排空馭氣奔如電，升天入地求之遍； 上窮碧落下黃泉，兩處茫茫皆不見。 忽聞海上有仙山，山在虛無縹緲間。 樓閣玲瓏五雲起，其中綽約多仙子。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center my-5">如何那麼美味</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="mr-3">
+              <i class="fab fa-gg-circle fa-4x"></i>
+            </div>
+            <div>
+              <h3>燦爛繽紛的食材交疊</h3>
+              <p>中有一人字太真，雪膚花貌參差是。 金闕西廂叩玉扃，轉教小玉報雙成。 聞道漢家天子使，九華帳裡夢魂驚； 攬衣推枕起徘徊，珠箔銀屏迤邐開。 雲鬢半偏新睡覺，花冠不整下堂來。 風吹仙袂飄飄舉，猶似霓裳羽衣舞。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="mr-3">
+              <i class="fab fa-angular fa-4x"></i>
+            </div>
+            <div>
+              <h3>如同交響樂般的組合</h3>
+              <p>玉容寂寞淚闌干，梨花一枝春帶雨。 含情凝睇謝君王，一別音容兩渺茫。 昭陽殿裡恩愛絕，蓬萊宮中日月長。 回頭下望人寰處，不見長安見塵霧。 唯將舊物表深情，鈿合金釵寄將去。 釵留一股合一扇，釵擘黃金合分鈿。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="mr-3">
+              <i class="fas fa-music fa-4x"></i>
+            </div>
+            <div>
+              <h3>是貝多芬和拉赫曼尼諾夫</h3>
+              <p>但教心似金鈿堅，天上人間會相見。 臨別殷勤重寄詞，詞中有誓兩心知， 七月七日長生殿，夜半無人私語時：「 在天願作比翼鳥，在地願為連理枝。」 天長地久有時盡，此恨綿綿無絕期。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="mr-3">
+              <i class="fas fa-frown fa-4x"></i>
+            </div>
+            <div>
+              <h3>在嘴裡響徹雲霄地猖狂</h3>
+              <p>相顧無言惟有淚千行，十年生死兩茫茫，不思量，自難忘。 千里孤墳，無處話淒涼。 縱使相逢應不識，塵滿面，鬢如霜。夜來幽夢忽還鄉，小軒窗，正梳妝。 相顧無言，惟有淚千行。 料得年年腸斷處，明月夜，短松岡。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container-fluid py-5 bg-light text-white" style="position: relative;">
+    <div class="row justify-content-end">
+      <div class="col-md-5 bg-cover" style="
+position: absolute; top:0; bottom: 0;background-image:
+url(https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d892112a159aee439a3bbb23586fa21d&auto=format&fit=crop&w=1650&q=801650w)"></div>
+    </div>
+    <div class="container">
+      <div class="row text-md-dark">
+        <div class="col-md-7">
+          <h3>讓快樂持續發生，體脂肪持續堆疊</h3>
+          <p>大江東去，浪淘盡，千古風流人物。 故壘西邊，人道是，三國周郎赤壁。</p>
+          <dl class="row">
+            <dt class="col-md-3">亂石崩雲</dt>
+            <dd class="col-md-9">驚濤裂岸，捲起千堆雪。 江山如畫，一時多少豪傑。</dd>
+
+            <dt class="col-md-3">遙想公瑾當年</dt>
+            <dd class="col-md-9">
+              <p>小喬出嫁了，雄姿英發。 羽扇綸巾，談笑間，強虜飛灰湮滅。</p>
+            </dd>
+
+            <dt class="col-md-3">故國神遊</dt>
+            <dd class="col-md-9">多情應笑我，早生華髮。 人間如夢，一尊還酹江月。</dd>
+
+            <dt class="col-md-3 text-truncate">春花秋月何時了</dt>
+            <dd class="col-md-9">往事知多少。小樓昨夜又東風，故國不堪回首月明中。</dd>
+
+            <dt class="col-md-3">雕欄玉砌應猶在</dt>
+            <dd class="col-md-9">只是朱顏改。問君能有幾多愁？恰似一江春水向東流。</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.005038298767!2d121.56232116500627!3d25.03390308397241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6da9c9e1f%3A0x1206bcf082fd10a6!2zMTEw5Y-w5YyX5biC5L-h576p5Y2A5L-h576p6Lev5LqU5q61N-iZn-WPsOWMlzEwMeWkp-aokw!5e0!3m2!1szh-TW!2stw!4v1524036702179"
+            width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6">
+          <form action="" class="needs-validation" novalidate>
+            <div class="form-group">
+              <label for="username">姓名*</label>
+              <input type="text" class="form-control" id="username" placeholder="請輸入姓名" required>
+              <div class="invalid-feedback">
+                請輸入您的姓名
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="tel">電話*</label>
+              <input type="tel" class="form-control" id="tel" placeholder="請輸入電話" required>
+              <div class="invalid-feedback">
+                請輸入您的電話
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email*</label>
+              <input type="email" class="form-control" id="email" placeholder="請輸入信箱" required>
+              <div class="invalid-feedback">
+                請輸入您的信箱
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="number">用餐人數*</label>
+              <input type="number" class="form-control" id="number" placeholder="請輸入用餐人數" required>
+              <div class="invalid-feedback">
+                你不輸入我怎麼會知道你有幾個人要來吃咧?ˊ_>ˋ
+              </div>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio1">需要素食</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">不需要素食</label>
+            </div>
+            <div class="text-right">
+              <button type="button" class="btn btn-secondary">取消</button>
+              <button type="submit" class="btn btn-warning">送出</button>
+            </div>
+          </form>
+          <script>
+            (function () {
+              'use strict';
+              window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                  form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                  }, false);
+                });
+              }, false);
+            })();
+          </script>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 p-5 bg-cover text-white" style="background-image:url(https://images.unsplash.com/photo-1507598641400-ec3536ba81bc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5d1d7de142e03475cdc90421d6c2bf2a&auto=format&fit=crop&w=1650&q=801650w)">
+        <div class="row">
+          <div class="col-md-9">
+            <small>一起撿橘子</small>
+            <h3>我與父親不相見已二年餘了</h3>
+            <p>我說道：「爸爸，您走吧！」他望車外看了一看，說：「我買幾個橘子去，你就在此地不要走動。」我看那邊月臺的柵欄外有幾個賣東西的等著顧客。走到那邊月臺，須穿過鐵道，須跳下去又爬上去。父親是一個胖子，走過去自然要費事些。我本來要去的，他不肯，只好讓他去。</p>
+            <a href="#" class="btn btn-outline-warning">一起撿橘子</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 p-5 bg-cover text-white" style="background-image:url(https://images.unsplash.com/photo-1495041845204-feee5b0bda50?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=54067a6aba619083ae7647eaec82110c&auto=format&fit=crop&w=1534&q=801534w)">
+        <div class="row">
+          <div class="col-md-9">
+            <small>品嚐橘子</small>
+            <h3>我最不能忘記的是他的背影</h3>
+            <p>我看見他戴著黑布小帽，穿著黑布大馬褂，深青布棉袍，蹣跚地走到鐵道邊，慢慢探身下去，尚不大難。可是他穿過鐵道，要爬上那邊月臺，就不容易了。他用兩手攀著上面，兩腳再向上縮；他肥胖的身子向左微傾，顯出努力的樣子。這時我看見他的背影，我的眼淚很快地流下來了。</p>
+            <a href="#" class="btn btn-outline-warning">品嚐橘子</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="exampleModalLabel">登入</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="" class="needs-validation1" novalidate>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="email2">Email*</label>
+              <input type="email" class="form-control" id="email2" placeholder="請輸入信箱" required>
+              <div class="invalid-feedback">
+                請輸入您的信箱
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password*</label>
+              <input type="password" class="form-control" id="password" placeholder="請輸入密碼" required>
+              <div class="invalid-feedback">
+                請輸入您的密碼
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  記住帳號
+                </label>
+                <div class="invalid-feedback">
+                  你還沒點記住帳號啊同學
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">還沒有帳號嗎?</a>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+            <button type="submit" class="btn btn-primary">登入</button>
+          </div>
+        </form>
+        <script>
+          (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+              var forms = document.getElementsByClassName('needs-validation1');
+              var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+        </script>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-warning text-white">
+          <h5 class="modal-title ml-3" id="exampleModalLabel">註冊</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="" class="needs-validation2" novalidate>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6">
+                  <h3>註冊BT21西餐廳</h3>
+                  <p>投資一定有風險，基金投資有賺有賠，申購前應詳閱公開說明書。投資一定有風險，基金投資有賺有賠，申購前應詳閱公開說明書。投資一定有風險，基金投資有賺有賠，申購前應詳閱公開說明書。</p>
+                  <p>投資一定有風險，基金投資有賺有賠，申購前應詳閱公開說明書。投資一定有風險，基金投資有賺有賠，申購前應詳閱公開說明書。投資一定有風險，基金投資有賺有賠，申購前應詳閱公開說明書。</p>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email3">Email*</label>
+                    <input type="email" class="form-control" id="email3" placeholder="請輸入信箱" required>
+                    <div class="invalid-feedback">
+                      請輸入您的信箱
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password2">Password*</label>
+                    <input type="password" class="form-control" id="password2" placeholder="請輸入密碼" required>
+                    <div class="invalid-feedback">
+                      請輸入您的密碼
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password3">Password Again*</label>
+                    <input type="password" class="form-control" id="password3" placeholder="請再次確認輸入密碼" required>
+                    <div class="invalid-feedback">
+                      請再次輸入您的密碼
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck1" required>
+                      <label class="custom-control-label" for="customCheck1">同意條款</label>
+                      <div class="invalid-feedback">
+                        請同意條款哦！
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">已經註冊了嗎?</a>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+            <button type="submit" class="btn btn-primary">註冊</button>
+          </div>
+        </form>
+        <script>
+          (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+              var forms = document.getElementsByClassName('needs-validation2');
+              var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark py-4">
+    <div class="container d-flex">
+      <div class="text-white">
+        © Copright 2017 EverythingPasta
+      </div>
+      <div class="mx-2">
+        <a href="#" class="text-white">GitHub</a>
+      </div>
+      <div class="mx-2">
+        <a href="#" class="text-white">Facebook</a>
+      </div>
+      <div class="mx-2">
+        <a href="#" class="text-white">About</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      console.log('ready');
+      $('a[data-dismiss="modal"][data-toggle="modal"]').on('click', function () {
+        console.log('click');
+        var target = $(this).data('target');
+        console.log('target', target);
+        $(target).on('shown.bs.modal', function () {
+          $('body').addClass('modal-open')
+        })
+      })
+      // <a href="#" class="mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">已經註冊了嗎?</a>
+    })
+  </script>
+</body>
+
+</html>
