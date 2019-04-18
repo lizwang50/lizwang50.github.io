@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sweetaste</title>
+    <link rel="stylesheet" href="css/all.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container">
+          <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><i class="material-icons">menu</i></button><a href="index.html" class="navbar-brand"><img src="img/logotype-sm-dark.png" width="114" alt="" class="d-inline-block d-md-none"><img src="img/logo-all-dark.png" height="40" alt="" class="d-none d-md-inline-block"></a>
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active"><a href="index.html" class="nav-link text-primary">首頁<span class="sr-only">(current)</span></a></li>
+              <li class="nav-item dropdown"><a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle text-primary">甜點                </a>
+                <div aria-labelledby="navbarDropdown" class="dropdown-menu"><a href="product-1.html" class="dropdown-item">所有甜點</a><a href="product-1.html" class="dropdown-item">本日精選</a><a href="product-1.html" class="dropdown-item">人氣推薦</a><a href="product-1.html" class="dropdown-item">新品上市</a></div>
+              </li>
+              <li class="nav-item"><a href="login-page.html" class="nav-link text-primary">會員登入                </a></li>
+            </ul>
+          </div>
+          <div class="dropdown ml-auto">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-cart"><a href="carts.html" class="nav-link d-flex align-items-center text-primary order-md-1"><i class="fas fa-shopping-cart mr-1"></i><span class="badge badge-pill badge-danger">5</span></a></button>
+            <div style="min-width: 300px" class="dropdown-menu dropdown-menu-right">
+              <div class="p-4">
+                <h6>已選擇的商品</h6>
+                <table class="table table-sm">
+                  <tbody>
+                    <tr> 
+                      <td class="align-middle p-0 py-1">香草巧克力棋格蛋糕</td>
+                      <td class="align-middle py-1">NT$750</td>
+                    </tr>
+                  </tbody>
+                </table><strong>總計: NT$750</strong><a href="carts.html" title="title" class="btn btn-primary btn-block mt-2">立即結帳 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="container my-5">
+      <div class="row">
+        <div class="col-md-2 mb-5">
+          <div id="list-tab" class="list-group text-center"><a href="#pane-1" data-toggle="list" class="list-group-item list-group-item-action bg-primary text-white active">我的帳號</a><a href="#pane-2" data-toggle="list" class="list-group-item list-group-item-action">查詢訂單</a><a href="#pane-3" data-toggle="list" class="list-group-item list-group-item-action">更新個人資訊</a><a href="#pane-4" data-toggle="list" class="list-group-item list-group-item-action">更改密碼</a><a href="#pane-5" data-toggle="list" class="list-group-item list-group-item-action">收件地址管理</a><a href="#pane-6" data-toggle="list" class="list-group-item list-group-item-action">專屬折價卷</a><a href="#pane-7" data-toggle="list" class="list-group-item list-group-item-action">紅利點數</a><a href="#pane-8" data-toggle="list" class="list-group-item list-group-item-action">收藏清單</a><a href="#pane-9" data-toggle="list" class="list-group-item list-group-item-action">詢問紀錄</a></div>
+        </div>
+        <div class="col-md-10">
+          <div id="nav-tabContent" class="tab-content">
+            <div id="pane-1" class="tab-pane active">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="bg-bright border p-3">
+                    <p class="h5">累計消費金額 <span class="text-danger">NT$0</span></p><strong class="h5">可用紅利點數<span class="text-danger"> 0 點</span></strong><strong class="h5 ml-md-5">專屬折價卷 <span class="text-danger">0 張</span></strong>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <h5 class="pl-3">近期訂單</h5>
+                                <div class="col-md-12">
+                                  <div class="p-3 btn-primary-lighter"><span>訂單日期</span><span>2018-11-13</span><span class="ml-5">訂單編號 #</span><span>7238</span>
+                                  </div>
+                                  <table class="table mt-3 table-bordered">
+                                    <thead>
+                                      <tr></tr>
+                                      <th scope="col">商品名稱</th>
+                                      <th scope="col">總金額</th>
+                                      <th scope="col">付款狀態</th>
+                                      <th scope="col">配送狀態</th>
+                                      <th scope="col">訂單狀態</th>
+                                    </thead>
+                                    <tbody>
+                                      <tr></tr>
+                                      <th scope="row">香草巧克力棋格蛋糕
+                                        <td>NT$750</td>
+                                        <td>等待付款</td>
+                                        <td>未出貨</td>
+                                        <td> 
+                                          <button type="button" class="btn btn-accent btn-sm">查看詳情</button>
+                                        </td>
+                                      </th>
+                                      <tr></tr>
+                                      <th scope="row">經典原味千層蛋糕
+                                        <td>NT$750</td>
+                                        <td>已付款</td>
+                                        <td>未出貨</td>
+                                        <td> 
+                                          <button type="button" class="btn btn-accent btn-sm">查看詳情</button>
+                                        </td>
+                                      </th>
+                                      <tr></tr>
+                                      <th scope="row">伯爵千層蛋糕
+                                        <td>NT$750</td>
+                                        <td>已付款</td>
+                                        <td>出貨中</td>
+                                        <td> 
+                                          <button type="button" class="btn btn-accent btn-sm">查看詳情</button>
+                                        </td>
+                                      </th>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="p-3 btn-primary-lighter"><span>訂單日期</span><span>2018-11-14</span><span class="ml-5">訂單編號 #</span><span>7239</span>
+                                  </div>
+                                  <table class="table mt-3 table-bordered">
+                                    <thead>
+                                      <tr></tr>
+                                      <th scope="col">商品名稱</th>
+                                      <th scope="col">總金額</th>
+                                      <th scope="col">付款狀態</th>
+                                      <th scope="col">配送狀態</th>
+                                      <th scope="col">訂單狀態</th>
+                                    </thead>
+                                    <tbody>
+                                      <tr></tr>
+                                      <th scope="row">香草巧克力棋格蛋糕
+                                        <td>NT$750</td>
+                                        <td>等待付款</td>
+                                        <td>未出貨</td>
+                                        <td> 
+                                          <button type="button" class="btn btn-accent btn-sm">查看詳情</button>
+                                        </td>
+                                      </th>
+                                      <tr></tr>
+                                      <th scope="row">經典原味千層蛋糕
+                                        <td>NT$750</td>
+                                        <td>已付款</td>
+                                        <td>未出貨</td>
+                                        <td> 
+                                          <button type="button" class="btn btn-accent btn-sm">查看詳情</button>
+                                        </td>
+                                      </th>
+                                      <tr></tr>
+                                      <th scope="row">伯爵千層蛋糕
+                                        <td>NT$750</td>
+                                        <td>已付款</td>
+                                        <td>出貨中</td>
+                                        <td> 
+                                          <button type="button" class="btn btn-accent btn-sm">查看詳情</button>
+                                        </td>
+                                      </th>
+                                    </tbody>
+                                  </table>
+                                </div>
+              </div>
+            </div>
+            <div id="pane-2" class="tab-pane">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="p-3 btn-primary-lighter"><span class="text-secondary">訂單日期</span><span>2018-11-13</span><span class="text-secondary ml-5">訂單編號 </span><span>#7238</span><span class="text-secondary ml-5">總金額</span><span class="text-danger">NT$750</span></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="pt-4 pl-3">
+                                  <h5>訂單內容</h5>
+                                  <p><span class="text-secondary">付款狀態 </span><strong>已付款</strong><span class="text-secondary ml-5">配送狀態 </span><strong>未出貨</strong><span class="text-secondary ml-5">配送方式 </span><strong>超商取貨不付款-60.0</strong></p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row"> 
+                              <div class="col-md-12">
+                                <table class="table mt-3 table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">商品名稱</th>
+                                      <th scope="col">總金額</th>
+                                      <th scope="col">付款狀態</th>
+                                      <th scope="col">配送狀態</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">香草巧克力棋格蛋糕
+                                        <td>NT$750</td>
+                                        <td>等待付款</td>
+                                        <td>未出貨</td>
+                                      </th>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="pt-4 pl-3">
+                              <h5>付款資訊</h5>
+                            </div>
+                            <div class="row"> 
+                              <div class="col-md-12">
+                                <table class="table mt-3 table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">付款狀態</th>
+                                      <th scope="col">付款方式</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>等待付款</td>
+                                      <td>信用卡(VISA、MasterCard、JCB、UnionPay)</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="pt-4 pl-3">
+                              <h5>配送資訊</h5>
+                            </div>
+                            <div class="row"> 
+                              <div class="col-md-12">
+                                <table class="table mt-3 table-bordered">
+                                  <tbody>
+                                    <tr>
+                                      <th scope="col">配送狀態</th>
+                                      <td>未出貨</td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="col">配送方式</th>
+                                      <td>超商取貨不付款</td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="col">收件人</th>
+                                      <td>Lin Mavis</td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="col">收件地址</th>
+                                      <td>全家樹林自強店(新北市樹林區自強路82號、84號)</td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="col">聯絡電話</th>
+                                      <td>0912345678</td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="col">指定配送日期</th>
+                                      <td>2018-11-13</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="row"> 
+                              <div class="col-md-12">
+                                <table class="table mt-3 table-bordered">
+                                  <tbody>
+                                    <tr>
+                                      <th scope="col">訂單備註</th>
+                                      <td>無任何資訊</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+            </div>
+            <div id="pane-3" class="tab-pane">
+              <div class="row d-flex justify-content-center">
+                <div class="col-md-8">
+                  <h4>基本資料</h4>
+                  <form>
+                    <div class="form-group"> 
+                      <div class="form-row">
+                        <div class="form-group col-md-12">
+                          <label for="inputName">姓名</label>
+                          <input id="inputName" type="text" placeholder="Lin Mavis" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-12">
+                          <label for="inputPhone">手機號碼</label>
+                          <input id="inputPhone" type="number" placeholder="0912345678" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-12">
+                          <label for="inputEmail4">Email</label>
+                          <input id="inputEmail4" type="email" placeholder="Email" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-12">
+                          <label for="inputBirth">出生日期</label>
+                          <input id="inputBirth" type="text" placeholder="1991-01-01" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group"> 
+                      <div class="form-row">
+                        <div class="form-group col-md-12">
+                          <h5>性別</h5>
+                          <div class="form-group">
+                            <div class="custom-control custom-radio custom-control-inline">
+                              <input id="male" type="radio" name="gender" class="custom-control-input">
+                              <label for="male" class="custom-control-label">男</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                              <input id="female" type="radio" name="gender" class="custom-control-input">
+                              <label for="female" class="custom-control-label">女</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                          <h5>訂閱電子報</h5><small>訂閱商品/活動訊息，我們將不定期透過email通知最新商品活動及優惠訊息。</small>
+                          <div class="form-group py-3">
+                            <div class="custom-control custom-radio custom-control-inline">
+                              <input id="edmSend" type="radio" name="edm_sending" class="custom-control-input">
+                              <label for="edmSend" class="custom-control-label">訂閱</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                              <input id="edmDontSend" type="radio" name="edm_sending" class="custom-control-input">
+                              <label for="edmDontSend" class="custom-control-label">取消訂閱</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row d-flex justify-content-around">
+                          <div class="col-6">
+                            <button type="button" class="btn btn-secondary btn-block">重新填寫</button>
+                          </div>
+                          <div class="col-6">
+                            <button type="button" class="btn btn-danger btn-block">確定修改</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div id="pane-4" class="tab-pane">
+              <div class="row d-flex justify-content-center">
+                <div class="col-md-8">
+                  <form>
+                    <div class="form-group row">
+                      <label for="inputPasswordOld" class="col-form-label">目前的密碼</label>
+                      <input id="inputPasswordOld" type="password" placeholder="請輸入舊密碼" class="form-control">
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPasswordNew" class="col-form-label">新密碼</label>
+                      <input id="inputPasswordNew" type="password" placeholder="請輸入新密碼" class="form-control"><small class="text-danger">*請輸入6個字元以上的英文字母及數字，不可使用特殊符號</small>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPasswordNewCheck" class="col-form-label">新密碼確認</label>
+                      <input id="inputPasswordNewCheck" type="password" placeholder="請再次輸入新密碼" class="form-control">
+                    </div>
+                    <div class="form-group row d-flex justify-content-around">
+                      <div class="col-6">
+                        <button type="button" class="btn btn-secondary btn-block">重新填寫</button>
+                      </div>
+                      <div class="col-6">
+                        <button type="button" class="btn btn-danger btn-block">確定修改</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div id="pane-5" class="tab-pane">
+              <p>您目前尚無地址，請點擊增加新地址，以建立地址。</p>
+              <button class="btn btn-primary"> <i class="fas fa-plus-circle"></i>增加一筆常用地址</button>
+            </div>
+            <div id="pane-6" class="tab-pane"></div>
+            <div id="pane-7" class="tab-pane"></div>
+            <div id="pane-8" class="tab-pane">
+              <p>您的帳號目前沒有收藏的商品</p>
+            </div>
+            <div id="pane-9" class="tab-pane"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-primary-lighter pb-4">
+      <section class="bg-primary py-5 mb-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-5 d-flex align-items-center justify-content-center justify-content-md-start mb-4 mb-md-0"><img src="img/logo-light.png" width="40" alt=""><span class="text-white mx-3 h4 mb-0">訂閱甜蜜蜜優惠郵件</span></div>
+            <div class="col-md-5">
+              <div class="form-square form-square-withicon d-flex justify-content-between">
+                <label for="subscription" class="material-icons form-square-icon-left text-primary">email</label>
+                <input type="email" class="form-input w-100">
+                <button type="button" class="btn btn-accent btn-lg d-flex align-items-center rounded-0"><i class="material-icons">arrow_forward</i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-5 flex-column d-flex justify-content-between">
+            <div><img src="img/logotype.png" width="171" alt=""></div>
+            <ul class="list-unstyled text-primary">
+              <li>02-1234-5678</li>
+              <li>sweetaste@email.com</li>
+              <li>800台北市信義區幸福路 520 號</li>
+            </ul>
+          </div>
+          <div class="col-md-5 text-right d-none d-md-block"><img src="img/sm-今天是個吃甜點的好日子.png" width="59" alt=""></div>
+        </div>
+        <div class="row justify-content-center mt-6">
+          <div class="col-md-5"><img src="img/ic-facebook.png" height="32" alt="" class="mr-1"><img src="img/ic-line@.png" height="32" alt=""></div>
+          <div class="col-md-5 text-md-right"><span>© 2018 Sweetaste* All Rights Reserved</span></div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/carts.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation1');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+      if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+      }, false);
+      });
+      }, false);
+      })();
+    </script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation2');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+      if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+      }, false);
+      });
+      }, false);
+      })();
+    </script>
+  </body>
+</html>

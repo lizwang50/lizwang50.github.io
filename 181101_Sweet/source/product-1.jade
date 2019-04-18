@@ -1,0 +1,74 @@
+doctype html
+html(lang="en")
+  include head.jade
+  body
+    include header.jade
+    .container.px-0.px-md-3
+    section.container.my-8
+      .row
+        .col-md-3.mb-5
+          .list-group.text-center.sticky-top#list-tab
+            h2.bg-primary.h4.text-white.text-center.mb-0.py-3 甜點類別
+            a.list-group-item.list-group-item-action.h5.active(href="#pane-1",data-toggle="list") 所有甜點(48)
+            a.list-group-item.list-group-item-action.h5(href="#pane-2",data-toggle="list") 本日精選(10)
+            a.list-group-item.list-group-item-action.h5(href="#pane-3",data-toggle="list") 人氣推薦(26)
+            a.list-group-item.list-group-item-action.h5(href="#pane-4",data-toggle="list") 新品上市(12)
+        .col-md-9
+          .tab-content#nav-tabContent
+            .tab-pane.active#pane-1
+              .row.product-list
+                //- mixin productList
+                  .col-md-4
+                    .item-card.mb-4
+                          a(href="product-2.html", title="本日精選")
+                            .item-img(style="background-image: url(#{productData.posts[0].productImage})")
+                              .item-tag 本日精選
+                              .item-starred-icon
+                                label.ui-checked-display
+                                  input.ui-checkbox(type="checkbox")
+                                  i.material-icons.ui-show favorite
+                                  i.material-icons.ui-hidden favorite_border
+                          .item-body.d-flex.flex-column.text-center
+                            a(href="product-2.html", title="香草巧克力棋格蛋糕")
+                              .item-name.text-primary #{productData.posts[0].productName}
+                            strong.item-price.text-primary #{productData.posts[0].productPrice}
+                          a.item-1.btn.btn-lg.btn-block.btn-primary-lighter(href="#", title="加入購物車",data-sku="AW18116-a",data-name="香草巧克力棋格蛋糕",data-price="450",data-img="https://images.unsplash.com/photo-1462745294598-b3f9a2d7b858?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d80035da8c51f878806bc66fd454e504&auto=format&fit=crop&w=634&q=80") 加入購物車
+                //- +productList
+            .tab-pane#pane-2
+              .row
+                .col-md-4
+                  .item-card.mb-4
+                    a(href="product-2.html", title="本日精選")
+                      .item-img(style="background-image: url('https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2ce08c47852fb7cceac5e1e0fa88f404&auto=format&fit=crop&w=506&q=80')")
+                        .item-tag 本日精選
+                        .item-starred-icon
+                          label.ui-checked-display
+                            input.ui-checkbox(type="checkbox")
+                            i.material-icons.ui-show favorite
+                            i.material-icons.ui-hidden favorite_border
+                    .item-body.d-flex.flex-column.text-center
+                      a(href="product-2.html", title="酸甜野莓")
+                        .item-name.text-primary 酸甜野莓
+                      strong.item-price.text-primary NT$ 450
+                    a.btn.btn-lg.btn-block.btn-primary-lighter(href="carts.html", title="加入購物車") 加入購物車
+                .col-md-4
+                .col-md-4
+            .tab-pane#pane-3
+            .tab-pane#pane-4
+          nav.mt-5(aria-label="navigation")
+            ul.pagination.pagination-lg.list-unstyled.justify-content-center
+              li.page-item
+                a.page-link(href="#",aria-label="Previous")
+                  i.fas.fa-caret-left
+              li.page-item.active
+                a.page-link(href="#") 1
+              li.page-item
+                a.page-link(href="#") 2
+              li.page-item
+                a.page-link(href="#") 3
+              li.page-item
+                a.page-link(href="#",aria-label="next")
+                  i.fas.fa-caret-right
+    include footer.jade
+    script(src="js/product.js")
+    include scripts.jade

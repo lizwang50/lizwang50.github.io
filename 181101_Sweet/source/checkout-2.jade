@@ -1,0 +1,137 @@
+doctype html
+html(lang="en")
+  include head.jade
+  body
+    include header.jade
+    section.container
+          .col
+            h1.py-5.text-center.text-primary 購物結帳頁
+        .row.d-none.d-flex
+          .col-4 
+            p.text-center.text-primary Step.1<br />填寫訂購人
+          .col-4
+            p.text-center.text-primary Step.2<br />填寫付款配送資料
+          .col-4
+            p.text-center.text-primary.ml-4 Success<br />訂購成功
+        .row.d-flex.justify-content-center.mb-3.ml-1
+          .col-9
+            .process-steps.process-steps-dark.w-100
+              .step-circle.material-icons.completed done
+              .step-circle.material-icons.active
+              .step-circle.material-icons
+    section.container.my-lg-6
+      .row
+        .col-md-6
+            .negative-margin
+              .bg-primary.text-primary-lighter.p-5
+                form
+                  .form-row.mb-5
+                    .col-6
+                      h4 付款方式
+                  nav.nav.nav-tabs.nav-pills.nav-fill.nav-dark.mb-5
+                    a#payment-1-tab.nav-item.nav-link.h5.py-3.active(href="#payment-1",data-toggle="tab") 信用卡
+                    a#payment-2-tab.nav-item.nav-link.h5.py-3(href="#payment-2",data-toggle="tab") ATM匯款
+                    a#payment-3-tab.nav-item.nav-link.h5.py-3(href="#payment-3",data-toggle="tab") 超商代碼
+                  .tab-content
+                    #payment-1.tab-pane.fade.active.show(role="tabpanel")
+                      .form-row
+                        .col-12
+                          label.h5(for="creditCardName") 持卡人姓名
+                          input#creditCardName.form-control.form-control-lg.bg-primary-lighter(type="text",placeholder="Mavis Lin",aria-describedby="helpId")
+                      .form-row.mt-3
+                        .col-8
+                          label.h5(for="creditCardNumber") 信用卡卡號
+                          input#creditCardNumber.form-control.form-control-lg.bg-primary-lighter(type="text",placeholder="xxxx-xxxx-xxxx",aria-describedby="helpId")
+                        .col-4
+                          label.h5(for="creditCardSecurityNumber") 背面末三碼
+                          input#creditCardSecurityNumber.form-control.form-control-lg.bg-primary-lighter(type="text",placeholder="000",aria-describedby="helpId")
+                      label.h5.mt-3(for="inputState") 有效期限
+                      .form-row
+                        .col-6
+                          .form-group
+                            select#inputState.form-control.form-control-lg.bg-primary-lighter
+                              option(selected) 年
+                              option(value="2020") 2020
+                              option(value="2021") 2021
+                              option(value="2022") 2022
+                              option(value="2023") 2023
+                        .col-6
+                          .form-group
+                            select#inputState.form-control.form-control-lg.bg-primary-lighter
+                              option(selected) 月
+                              option(value="1") 1
+                              option(value="2") 2
+                              option(value="3") 3
+                              option(value="4") 4
+                    #payment-2.tab-pane.fade(role="tabpanel")
+                      h5 國泰世華銀行WEB ATM虛擬帳號，每筆訂單皆有專屬的轉帳ATM帳號！
+                      p 【銀行：國泰世華銀行-瑞湖分行　戶名：Sweet有限公司】
+                      ul.list-unstyled
+                        li.text-accent ．須於成立訂單後24小時內完成付款。
+                        li ．可使用讀卡機線上即時轉帳，或至各大金融機構ATM轉帳。
+                        li ．完成匯款請至「訂單客服」提供匯款日期、時間、金額。
+                        li ．如超過期限未完成付款，訂單將自動取消失效。
+                    #payment-3.tab-pane.fade(role="tabpanel")
+                      h5 7-11代碼繳費方便又安全，可至全省7-11門市ibon機台進行繳費！
+                      ul.list-unstyled
+                        li.text-accent ．須於成立訂單後24小時內完成付款。
+                        li ．請至ibon機台輸入繳費代碼(共12碼)，再至超商櫃檯繳費即可。
+                        li ．如超過期限未完成付款，訂單將自動取消失效。
+        .col-md-6
+            .negative-margin
+              .bg-primary.text-primary-lighter.p-5
+                form
+                  .form-row.mb-5
+                    .col-6
+                      h4 訂單發票
+                  nav.nav.nav-tabs.nav-pills.nav-fill.nav-dark.mb-5
+                    a#receipt-1-tab.nav-item.nav-link.h5.py-3.active(href="#receipt-1",data-toggle="tab") 電子發票
+                    a#receipt-2-tab.nav-item.nav-link.h5.py-3(href="#receipt-2",data-toggle="tab") 郵寄發票
+                  .tab-content
+                    #receipt-1.tab-pane.fade.active.show(role="tabpanel")
+                      .form-row
+                        .col-12
+                          .form-group
+                            label.h5(for="protableNumber") 載具號碼
+                            input#protableNumber.form-control.form-control-lg.bg-primary-lighter(type="text",placeholder="/+AAAAAA",aria-describedby="helpId")
+                      .form-row
+                        .col-12
+                          .form-group
+                            label.h5(for="idNumber") 統一編號（選填）
+                            input#idNumber.form-control.form-control-lg.bg-primary-lighter(type="text",placeholder="12345678",aria-describedby="helpId")
+                    #receipt-2.tab-pane.fade(role="tabpanel")
+                      label.h5(for="inputState") 地址
+                      .form-row
+                        .col-6
+                          .form-group
+                            select#inputState.form-control.form-control-lg.bg-primary-lighter
+                              option(selected) 台北市
+                              option(value="") 新北市
+                              option(value="") 基隆市
+                              option(value="") 桃園市
+                              option(value="") 新竹市
+                        .col-6
+                          .form-group
+                            select#inputArea.form-control.form-control-lg.bg-primary-lighter
+                              option(selected) 信義區
+                              option(value="") 大安區
+                              option(value="") 南港區
+                              option(value="") 中山區
+                              option(value="") 中正區
+                      .form-group
+                        input#address.form-control.form-control-lg(type="text",placeholder="信義路12巷",aria-describedby="helpId")
+
+                      .form-row
+                        .col-12
+                          .form-group
+                            label.h5(for="idNumber-2") 統一編號（選填）
+                            input#idNumber-2.form-control.form-control-lg.bg-primary-lighter(type="text",placeholder="12345678",aria-describedby="helpId")
+      .row.d-flex.justify-content-center.mt-5
+        .col-md-6
+          .negative-margin
+            a.btn.btn-lg.btn-primary.btn-block.py-3.text-white(href="checkout-2.html", title="title") 上一步
+        .col-md-6
+          .negative-margin
+            a.btn.btn-lg.btn-accent.btn-block.py-3.text-primary(href="checkout-success.html", title="title") 下一步
+    include footer.jade
+    include scripts.jade

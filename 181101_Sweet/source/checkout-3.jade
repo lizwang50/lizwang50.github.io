@@ -1,0 +1,99 @@
+doctype html
+html(lang="en")
+  include head.jade
+  body
+    include header.jade
+    section.container.my-lg-6
+        .row
+          .col-md-6
+            .negative-margin
+              .bg-primary.text-primary-lighter.p-5
+                form
+                  .form-row.mb-5
+                    .col-6
+                      h4 發票資料
+                    .col-6.d-flex.align-items-center
+                      .process-steps.w-100
+                        .step-circle.material-icons.completed done
+                        .step-circle.material-icons.completed done
+                        .step-circle.material-icons.active
+                  nav.nav.nav-tabs.nav-pills.nav-fill.nav-dark.mb-5
+                    a#receipt-1-tab.nav-item.nav-link.h4.py-3.active(href="#receipt-1",data-toggle="tab") 電子發票
+                    a#receipt-2-tab.nav-item.nav-link.h4.py-3(href="#receipt-2",data-toggle="tab") 郵寄發票
+                  .tab-content
+                    #receipt-1.tab-pane.fade.active.show(role="tabpanel")
+                      .form-row
+                        .col-12
+                          .form-group
+                            label.h5(for="protableNumber") 載具號碼
+                            input#protableNumber.form-control.form-control-lg.bg-primary-lighter(type="text",placeholder="/+AAAAAA",aria-describedby="helpId")
+                      .form-row
+                        .col-12
+                          .form-group
+                            label.h5(for="idNumber") 統一編號（選填）
+                            input#idNumber.form-control.form-control-lg.bg-primary-lighter(type="text",placeholder="12345678",aria-describedby="helpId")
+                    #receipt-2.tab-pane.fade(role="tabpanel")
+                      label.h5(for="inputState") 地址
+                      .form-row
+                        .col-6
+                          .form-group
+                            select#inputState.form-control.form-control-lg.bg-primary-lighter
+                              option(selected) 台北市
+                              option(value="") 新北市
+                              option(value="") 基隆市
+                              option(value="") 桃園市
+                              option(value="") 新竹市
+                        .col-6
+                          .form-group
+                            select#inputArea.form-control.form-control-lg.bg-primary-lighter
+                              option(selected) 信義區
+                              option(value="") 大安區
+                              option(value="") 南港區
+                              option(value="") 中山區
+                              option(value="") 中正區
+                      .form-row
+                        .col-12
+                          .form-group
+                            label.h5(for="idNumber-2") 統一編號（選填）
+                            input#idNumber-2.form-control.form-control-lg.bg-primary-lighter(type="text",placeholder="12345678",aria-describedby="helpId")
+            .negative-margin
+              a.btn.btn-lg.btn-accent.btn-block.py-3.text-primary(href="checkout-success.html", title="title") 下一步
+          .col-md-6.d-none.d-lg-block
+            .card.border-primary-lighter.mb-4
+              h5.card-header.bg-primary-lighter.text-center.text-primary 訂單摘要
+              .card-body.text-primary-light
+                .d-flex.justify-content-between.mb-3
+                  span 小計
+                  span NT$ 2,700
+                .d-flex.justify-content-between.mb-3
+                  span 運費
+                  span NT$ 300
+                .d-flex.justify-content-between
+                  span.h5 總計
+                  span.h5 NT$ 3,000
+            .card.border-primary-lighter
+              h5.card-header.bg-primary-lighter.text-center.text-primary 購物清單
+              .card-body.carts.text-primary-light
+                .d-flex
+                  .carts-img.cart-image-sm.mr-3(style="background-image:url('https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3dd64dce95fceedb193ec7bcf0adbb8b&auto=format&fit=crop&w=334&q=80')")
+                  .d-flex.align-items-md-center.flex-column.flex-md-grow-1.flex-md-row
+                    .flex-fill.mr-md-4
+                      span.h5 糖霜肉桂派（2）
+                      br
+                      span NT$ 900
+                .d-flex.mt-3
+                  .carts-img.cart-image-sm.mr-3(style="background-image:url('https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3dd64dce95fceedb193ec7bcf0adbb8b&auto=format&fit=crop&w=334&q=80')")
+                  .d-flex.align-items-md-center.flex-column.flex-md-grow-1.flex-md-row
+                    .flex-fill.mr-md-4
+                      span.h5 糖霜肉桂派（2）
+                      br
+                      span NT$ 900
+                .d-flex.mt-3
+                  .carts-img.cart-image-sm.mr-3(style="background-image:url('https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3dd64dce95fceedb193ec7bcf0adbb8b&auto=format&fit=crop&w=334&q=80')")
+                  .d-flex.align-items-md-center.flex-column.flex-md-grow-1.flex-md-row
+                    .flex-fill.mr-md-4
+                      span.h5 糖霜肉桂派（2）
+                      br
+                      span NT$ 900
+    include footer.jade
+    include scripts.jade

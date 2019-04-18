@@ -1,0 +1,18 @@
+.form-square{
+    background-color: $primary-200;
+    &.form-square-withicon{
+        padding-left: 60px;
+        position: relative;
+    }
+    .form-input{
+        padding: 20px 0;
+        background-color: transparent;
+        border: 0;
+        outline: none;
+    }
+    .form-square-icon-left{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+}

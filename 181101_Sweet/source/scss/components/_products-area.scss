@@ -1,0 +1,18 @@
+.products-area{
+    .product-variant-options{
+        label{
+            background-color: $primary-500;
+            padding: 10px;
+            border: 0;
+        }
+        .btn-group{
+            padding: 12px 12px 12px 0;
+        }
+    }
+    .product-buttons{
+        margin-top: 12px;
+        a{
+            padding: 1rem;
+        }
+    }
+}

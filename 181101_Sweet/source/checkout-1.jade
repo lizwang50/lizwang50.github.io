@@ -1,0 +1,273 @@
+doctype html
+html(lang="en")
+  include head.jade
+  body
+    include header.jade
+    section.container
+          .col
+            h1.py-5.text-center.text-primary 購物結帳頁
+        .row.d-none.d-flex
+          .col-4 
+            p.text-center.text-primary Step.1<br />填寫訂購人
+          .col-4
+            p.text-center.text-primary Step.2<br />填寫付款配送資料
+          .col-4
+            p.text-center.text-primary.ml-4 Success<br />訂購成功
+        .row.d-flex.justify-content-center.mb-3.ml-1
+          .col-9
+            .process-steps.process-steps-dark.w-100
+              .step-circle.material-icons.active
+              .step-circle.material-icons
+              .step-circle.material-icons
+    section.container.my-lg-6
+        .row
+          .col-md-12.d-none.d-lg-block
+            .card.border-primary-lighter.mb-4
+              h5.card-header.bg-primary-lighter.text-center.text-primary 訂單摘要
+              table.table.table-responsive-sm.text-primary-light.carts
+                thead
+                  tr
+                    //- th(scope="col") 
+                    th(scope="col") 商品編號
+                    th(scope="col") 商品名稱
+                    th(scope="col") 單價
+                    th(scope="col") 數量
+                    th.text-center(scope="col") 小計
+                tbody
+                  tr
+                    //- td.align-middle(scope="col") 
+                    //-   a.btn.material-icons(href="#", title="title") delete_outline
+                    th.align-middle(scope="col") S2212-a1
+                    td.align-middle(scope="col") 
+                      img.carts-img.cart-image-sm.mr-1(src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3dd64dce95fceedb193ec7bcf0adbb8b&auto=format&fit=crop&w=334&q=80", alt="")
+                      |糖霜肉桂派
+                    td.align-middle(scope="col") NT$ 900
+                    td.align-middle(scope="col") 2
+                    td.text-right.align-middle(scope="col") NT$ 1,800
+                  tr
+                    //- td.align-middle(scope="col") 
+                    //-   a.btn.material-icons(href="#", title="title") delete_outline
+                    th.align-middle(scope="col") S2212-a1
+                    td.align-middle(scope="col") 
+                      img.carts-img.cart-image-sm.mr-1(src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3dd64dce95fceedb193ec7bcf0adbb8b&auto=format&fit=crop&w=334&q=80", alt="")
+                      |糖霜肉桂派
+                    td.align-middle(scope="col") NT$ 900
+                    td.align-middle(scope="col") 2
+                    td.text-right.align-middle(scope="col") NT$ 1,800
+                tfoot
+                  tr
+                    th.text-right(colspan="4") 商品小計
+                    td.text-right(colspan="2") NT$ 3,600
+                  tr
+                    th.text-right(colspan="4") 運費
+                    td.text-right(colspan="2") NT$ 300
+                  tr
+                    th.h4.text-right(colspan="4") 總金額
+                    td.h4.text-right(colspan="2") NT$ 3,900
+        .row
+          .col-md-6
+            .negative-margin
+              .btn-primary-lighter.text-primary.p-5
+                form
+                  .form-row.mb-5
+                    .col-6
+                      h4 訂購人資料
+                  .form-row
+                    .col-6
+                      .form-group
+                        label.h5(for="lastName") 姓氏
+                        input#lastName.form-control.form-control-lg(type="text",placeholder="Lin",aria-describedby="helpId")
+                    .col-6
+                      .form-group
+                        label.h5(for="firstName") 名字
+                        input#firstName.form-control.form-control-lg(type="text",placeholder="Mavis",aria-describedby="helpId")
+                  .form-row
+                    .col-12
+                      .form-group
+                        label.h5(for="phoneNumber") 電話
+                        input#phoneNumber.form-control.form-control-lg(type="text",placeholder="0933-333-333",maria-describedby="helpId")
+                  .form-row
+                    .col-12
+                        .form-group
+                          label.h5(for="email") 電子郵件信箱
+                          input#email.form-control.form-control-lg(type="text",placeholder="example@mail.com",aria-describedby="helpId")
+
+                  label.h5(for="inputState") 縣市
+                  .form-row
+                    .col-6
+                      .form-group
+                        select#inputState.form-control.form-control-lg
+                          option(selected) 台北市
+                          option(value="") 新北市
+                          option(value="") 基隆市
+                          option(value="") 桃園市
+                          option(value="") 新竹市
+                    .col-6
+                      .form-group
+                        select#inputArea.form-control.form-control-lg
+                          option(selected) 信義區
+                          option(value="") 大安區
+                          option(value="") 南港區
+                          option(value="") 中山區
+                          option(value="") 中正區
+                  .form-group
+                    input#address.form-control.form-control-lg(type="text",placeholder="信義路12巷",aria-describedby="helpId")
+          .col-md-6
+            .negative-margin
+              .bg-primary.text-primary-lighter.p-5
+                form
+                  .form-row.mb-5
+                    .col-6
+                      h4 收件人資料
+                      small *自行取貨者無須填寫
+                    .col-6
+                      .custom-control.custom-checkbox.mt-1
+                        input#customCheck2.custom-control-input(type="checkbox")
+                        label.custom-control-label(for="customCheck2") 與訂購人相同
+                  .form-row
+                    .col-6
+                      .form-group
+                        label.h5(for="lastName") 姓氏
+                        input#lastName.form-control.form-control-lg(type="text",placeholder="Lin",aria-describedby="helpId")
+                    .col-6
+                      .form-group
+                        label.h5(for="firstName") 名字
+                        input#firstName.form-control.form-control-lg(type="text",placeholder="Mavis",aria-describedby="helpId")
+                  .form-row
+                    .col-12
+                      .form-group
+                        label.h5(for="phoneNumber") 電話
+                        input#phoneNumber.form-control.form-control-lg(type="text",placeholder="0933-333-333",maria-describedby="helpId")
+                  label.h5(for="inputState") 地址
+                  .form-row
+                    .col-6
+                      .form-group
+                        select#inputState.form-control.form-control-lg
+                          option(selected) 台北市
+                          option(value="") 新北市
+                          option(value="") 基隆市
+                          option(value="") 桃園市
+                          option(value="") 新竹市
+                    .col-6
+                      .form-group
+                        select#inputArea.form-control.form-control-lg
+                          option(selected) 信義區
+                          option(value="") 大安區
+                          option(value="") 南港區
+                          option(value="") 中山區
+                          option(value="") 中正區
+                  .form-group
+                    input#address.form-control.form-control-lg(type="text",placeholder="信義路12巷",aria-describedby="helpId")
+        .row.mt-5.d-flex.justify-content-end
+          .col-md-12
+            .negative-margin
+                .btn-primary-lighter.text-primary.p-5
+                  form
+                    .form-row.mb-5
+                      .col-6
+                        h4 配送方式
+                    nav.nav.nav-tabs.nav-pills.nav-fill.mb-5.border
+                      a#sendProductMethod-1-tab.nav-item.nav-link.h5.py-3.active(href="#sendProductMethod-1",data-toggle="tab") 超商取貨
+                      a#sendProductMethod-2-tab.nav-item.nav-link.h5.py-3(href="#sendProductMethod-2",data-toggle="tab") 宅配
+                      a#sendProductMethod-3-tab.nav-item.nav-link.h5.py-3(href="#sendProductMethod-3",data-toggle="tab") 自行門市取貨
+                    .tab-content
+                      #sendProductMethod-1.tab-pane.fade.active.show(role="tabpanel")
+                        label.h5(for="inputConvenientStore") 選擇超商
+                        .form-row.my-4
+                          .custom-control.custom-radio
+                            input#customRadio1.custom-control-input(type='radio', name='customRadio')
+                            label.custom-control-label(for='customRadio1') 7-11
+                          .custom-control.custom-radio.ml-5
+                            input#customRadio2.custom-control-input(type='radio', name='customRadio')
+                            label.custom-control-label(for='customRadio2') 全家便利商店
+                        label.h5(for="inputState") 地址
+                        .form-row
+                          .col-4
+                            .form-group
+                              select#inputState.form-control.form-control-lg
+                                option(selected) 選擇縣市
+                                option(value="") 台北市
+                                option(value="") 新北市
+                                option(value="") 基隆市
+                                option(value="") 桃園市
+                                option(value="") 新竹市
+                          .col-4
+                            .form-group
+                              select#inputArea.form-control.form-control-lg
+                                option(selected) 選擇區域
+                                option(value="") 信義區
+                                option(value="") 大安區
+                                option(value="") 南港區
+                                option(value="") 中山區
+                                option(value="") 中正區
+                          .col-4
+                            .form-group
+                              select#inputStore.form-control.form-control-lg
+                                option(selected) 選擇街/道/巷
+                                option(value="") 大道路
+                                option(value="") 市府路
+                                option(value="") 永吉路
+                                option(value="") 松仁路
+                        h5 已選擇的超商：
+                          span 全家大道店
+                      #sendProductMethod-2.tab-pane.fade(role="tabpanel")
+                        label.h5(for="inputState") 地址
+                        .form-row
+                          .col-4
+                            .form-group
+                              select#inputState.form-control.form-control-lg
+                                option(selected) 台北市
+                                option(value="") 新北市
+                                option(value="") 基隆市
+                                option(value="") 桃園市
+                                option(value="") 新竹市
+                          .col-4
+                            .form-group
+                              select#inputArea.form-control.form-control-lg
+                                option(selected) 信義區
+                                option(value="") 大安區
+                                option(value="") 南港區
+                                option(value="") 中山區
+                                option(value="") 中正區
+                          .col-4
+                            .form-group
+                              input#address.form-control.form-control-lg(type="text",placeholder="信義路12巷",aria-describedby="helpId")
+                        label.h5(for="inputDetail") 備註
+                        .form-row
+                          .col
+                            .form-group
+                              input#inputDetail.form-control.form-control-lg(type="text",placeholder="管理員代收",aria-describedby="helpId")
+                      #sendProductMethod-3.tab-pane.fade(role="tabpanel")
+                        label.h5(for="inputStore") 門市取貨
+                        .form-row
+                          .col-4
+                            .form-group
+                              select#inputStore.form-control.form-control-lg
+                                option(selected) 選擇門市
+                                option(value="") 萬里創始店
+                                option(value="") 內湖旗艦店
+                                option(value="") 台北民生店
+                                option(value="") 永和中正店
+                          .col-4
+                            .form-group
+                              select#inputTime.form-control.form-control-lg
+                                option(selected) 選擇取貨時間
+                                option(value="") 11:00-12:00
+                                option(value="") 12:00-13:00
+                                option(value="") 13:00-14:00
+                                option(value="") 14:00-15:00
+                        h5 自行門市取貨說明
+                        ul.list-unstyled
+                          li ．訂購派塔類商品，請選擇下午時段取貨。
+                          li ．指定上午時段取貨，請於【上午12點後】前往門市取貨。
+                          li ．指定下午時段取貨，請於【下午3點後】前往門市取貨。
+                          li ．提醒您！請務必於指定到貨日至門市完成取貨，若當日未取貨，則訂單視同取消！
+        .row.d-flex.justify-content-center.mt-5
+          .col-md-6
+            .negative-margin
+              a.btn.btn-lg.btn-accent.btn-block.py-3.text-primary(href="product-1.html", title="title") 繼續購物
+          .col-md-6
+            .negative-margin
+              a.btn.btn-lg.btn-primary.btn-block.py-3.text-white(href="checkout-2.html", title="title") 下一步
+    include footer.jade
+    include scripts.jade
